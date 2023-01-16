@@ -2,7 +2,7 @@ document.write("<p>HTML-DOS v1.00</p>")
 document.write('<p id="iosoutput"></p>')
 document.write('<input id="iosinput"/>')
 
-var disk = null
+var disk = readdisk()
 var iosinput = document.getElementById('iosinput')
 var iosoutput = document.getElementById('iosoutput')
 
