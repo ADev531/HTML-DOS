@@ -10,11 +10,9 @@ var iosoutput = document.getElementById('iosoutput')
 fetch('https://adev531.github.io/HTMLDOS/disk.json')
     .then((response) => response.json())
     .then((json) => {
-	console.log(json)
+	console.log('HTML-DOS Boot drive information :' + json)
 	disk = json
     });
-
-iosoutput.innerHTML = disk["helloworld.txt"]
 
 iosinput.addEventListener('keypress', function(e){
 	var args = iosinput.value.split(" ")
@@ -28,6 +26,8 @@ iosinput.addEventListener('keypress', function(e){
 					iosoutput.innerHTML += arg + ' '
 				}
 			});
+		} else if (command === "readfile") {
+			iosoutput.innerHTML += "<br>" + disk[args[1]]
 		} else {
 			iosoutput.innerHTML += "<br>no command named " + command + ".\n"
 		}
