@@ -10,7 +10,7 @@ var disk = null
 fetch('https://adev531.github.io/HTMLDOS/disk.json')
     .then((response) => response.json())
     .then((json) => {
-	console.log('HTML-DOS Boot drive information :' + json)
+	console.log(json)
 	disk = json
     });
 
@@ -27,7 +27,11 @@ iosinput.addEventListener('keypress', function(e){
 				}
 			});
 		} else if (command === "readfile") {
-			iosoutput.innerHTML += "<br>" + disk[args[1]]
+			try {
+				iosoutput.innerHTML += "<br>" + disk["files"][args[1]]
+			} catch {
+				iosoutput.innerHTML += "<br>No file found."
+			}
 		} else {
 			iosoutput.innerHTML += "<br>no command named " + command + ".\n"
 		}
