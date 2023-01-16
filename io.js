@@ -15,7 +15,7 @@ fetch('https://adev531.github.io/HTMLDOS/disk.json')
 iosinput.addEventListener('keypress', function(e){
 	var args = iosinput.value.split(" ")
 	var command = args[0]
-	if (e.keyCode === 13 || epy.which === 13) {
+	if (e.keyCode === 13 || e.which === 13) {
 		e.preventDefault()
 		if (command === "echo") {
 			iosoutput.innerHTML += '<br>'
