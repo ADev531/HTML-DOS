@@ -5,7 +5,7 @@ document.write('<input id="iosinput"/>')
 var disk = null
 fetch('https://adev531.github.io/HTMLDOS/disk.json')
 	.then(response => {
-	disk = response.json();
+	disk = response
 })
 var iosinput = document.getElementById('iosinput')
 var iosoutput = document.getElementById('iosoutput')
