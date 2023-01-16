@@ -1,0 +1,15 @@
+body {
+	background-color: black;
+	scroll-behavior: smooth;
+}
+
+p {
+	color: white;
+	font-weight: bold;
+}
+
+input {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
