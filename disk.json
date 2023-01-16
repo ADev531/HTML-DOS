@@ -1,3 +1,5 @@
 {
-  "helloworld.txt": "Hello, world!"
+  "files" : {
+    "helloworld.txt": "Hello, world!"
+  }
 }
