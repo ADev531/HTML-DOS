@@ -2,9 +2,11 @@ document.write("<p>HTML-DOS v1.00</p>")
 document.write('<p id="iosoutput"></p>')
 document.write('<input id="iosinput"/>')
 
-var disk = readdisk()
+var disk = readDisk()
 var iosinput = document.getElementById('iosinput')
 var iosoutput = document.getElementById('iosoutput')
+
+iosoutput.innerHTML = disk["helloworld.txt"]
 
 iosinput.addEventListener('keypress', function(e){
 	var args = iosinput.value.split(" ")
