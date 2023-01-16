@@ -5,11 +5,13 @@ document.write('<input id="iosinput"/>')
 var iosinput = document.getElementById('iosinput')
 var iosoutput = document.getElementById('iosoutput')
 
+var disk = null
+
 fetch('https://adev531.github.io/HTMLDOS/disk.json')
     .then((response) => response.json())
     .then((json) => {
 	console.log('HTML-DOS Boot drive information :' + json)
-	var disk = json
+	disk = json
     });
 
 iosinput.addEventListener('keypress', function(e){
