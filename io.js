@@ -2,7 +2,11 @@ document.write("<p>HTML-DOS v1.00</p>")
 document.write('<p id="iosoutput"></p>')
 document.write('<input id="iosinput"/>')
 
-var disk = readDisk()
+var disk = null
+fetch('https://adev531.github.io/HTMLDOS/disk.json')
+	.then(response => {
+	disk = response.json();
+})
 var iosinput = document.getElementById('iosinput')
 var iosoutput = document.getElementById('iosoutput')
 
