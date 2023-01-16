@@ -3,15 +3,16 @@ document.write('<p id="iosoutput"></p>')
 document.write('<input id="iosinput"/>')
 
 var disk = null
+
+var iosinput = document.getElementById('iosinput')
+var iosoutput = document.getElementById('iosoutput')
+
 fetch('https://adev531.github.io/HTMLDOS/disk.json')
     .then((response) => response.json())
     .then((json) => {
 	console.log(json)
 	disk = json
     });
-
-var iosinput = document.getElementById('iosinput')
-var iosoutput = document.getElementById('iosoutput')
 
 iosoutput.innerHTML = disk["helloworld.txt"]
 
