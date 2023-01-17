@@ -1,8 +1,11 @@
-// not used. used in 1.0 devalpha 1 (jsfs service)
+// the JSFS "JSON-File/System". This manage disk, and files.
 
 function readDisk() {
 	fetch('https://adev531.github.io/HTMLDOS/disk.json')
-		.then(response => {
-		return response.json();
+    		.then((response) => response.json())
+    		.then((json) => {
+		console.log(json)
+		return json
 	})
+    });
 }
