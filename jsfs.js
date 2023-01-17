@@ -6,6 +6,6 @@ function readDisk() {
     		.then((json) => {
 		console.log(json)
 		return json
-	})
+	}
     });
 }
