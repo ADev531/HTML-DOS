@@ -3,9 +3,6 @@
 function readDisk() {
 	fetch('https://adev531.github.io/HTMLDOS/disk.json')
     		.then((response) => response.json())
-    		.then((json) => {
-		console.log(json)
-		return json
-	}
-    });
+    		.then((json) => return json)
+    	};
 }
