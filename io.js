@@ -28,7 +28,9 @@ iosinput.addEventListener('keypress', function(e){
 		} else if (command === "dir") {
 			var allfiles = getAllFiles()
 			
-			allfiles.forEach(element => iosoutput.innerHTML += "<br>" + element);
+			allfiles.forEach(function(element){
+  				iosoutput.innerHTML += "<br>" + element
+			})
 		} else {
 			iosoutput.innerHTML += "<br>no command named " + command + ".\n"
 		}
