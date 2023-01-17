@@ -6,6 +6,6 @@ function readDisk() {
     		.then((json) => disk = json)
 }
 
-function readAllFiles() {
+function getAllFiles() {
 	return disk["files"]
 }
