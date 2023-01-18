@@ -28,6 +28,8 @@ iosinput.addEventListener('keypress', function(e){
 		} else if (command === "dir") {
 			var allfiles = getAllFiles()
 			
+			console.log(allfiles)
+			
 			allfiles.forEach(function(element){
   				iosoutput.innerHTML += "<br>" + element
 			})
