@@ -8,7 +8,7 @@ var disk = readDisk();
 
 iosinput.addEventListener('keypress', function(e){
 	var args = iosinput.value.split(' ');
-	var command = args[0];
+	var command = args[0].toLowerCase();
 	var disk = readDisk();
 	
 	if (e.keyCode === 13 || e.which === 13) {
