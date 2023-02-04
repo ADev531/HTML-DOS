@@ -7,7 +7,7 @@ function saveDisk() {
 
 function readDisk() {
 	if (localStorage.getItem("disk") === null) {
-		fetch('disk.json')
+		fetch('https://github.io/HTML-DOS/disk.json')
     		.then((response) => response.json())
     		.then((json) => disk = json)
 		//fetchs default disk.
