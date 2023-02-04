@@ -14,7 +14,6 @@ function readDisk() {
 		saveDisk();
 	} else {
 		disk = JSON.parse(localStorage.getItem("disk"));
-		console.log(JSON.stringify(disk));
 	}
 }
 
