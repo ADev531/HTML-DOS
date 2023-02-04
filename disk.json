@@ -1,6 +1,7 @@
 {
   "files" : {
     "helloworld.txt": "Hello, world!",
-    "nothelloworld.exe": "not hello world!"
+    "nothelloworld.exe": "not hello world!",
+	"thisisvirus.txt": "virus virus this is virus"
   }
 }

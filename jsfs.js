@@ -1,11 +1,22 @@
-// the JSFS stands "JSON-File/System". This manage disk, and files.
+// the JSFS stands "JSON FileSystem". This manage disk, and files.
+
+function saveDisk() {
+	//Saves disk
+	localStorage.setItem("disk", JSON.stringify(disk));
+}
 
 function readDisk() {
-	fetch('https://adev531.github.io/HTMLDOS/disk.json')
+	if (localStorage.getItem("disk") === null) {
+		fetch('disk.json')
     		.then((response) => response.json())
     		.then((json) => disk = json)
+		//fetchs default disk.
+		saveDisk();
+	} else {
+		disk = JSON.parse(localStorage.getItem("disk"));
+	}
 }
 
 function getAllFiles() {
-	return disk["files"]
+	return disk["files"];
 }
