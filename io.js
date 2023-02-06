@@ -83,19 +83,10 @@ iosinput.addEventListener('keypress', function(e){
 		}
 		else if (command === "restore") {
 			iosoutput.innerHTML += "<br>JSFS Restore is checking problem for C: drive...";
-			if (disk === null) {
+			if (disk === undefined){
 				iosoutput.innerHTML += "<br>JSFS Restore has finded problem. fixing...";
 				disk = JSON.parse('{"files": {"info.txt":"The HTML-DOS is Restored by JSFS Recovery."}}')
-				if (disk != null) {
-					iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
-					saveDisk();
-				} else {
-					iosoutput.innerHTML += "<br>JSFS Restore has failed disk recovery."
-				}
-			} else if (disk === undefined){
-				iosoutput.innerHTML += "<br>JSFS Restore has finded problem. fixing...";
-				disk = JSON.parse('{"files": {"info.txt":"The HTML-DOS is Restored by JSFS Recovery."}}')
-				if (disk != null) {
+				if (disk != undefined) {
 					iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
 					saveDisk();
 				} else {
