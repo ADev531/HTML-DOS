@@ -85,7 +85,10 @@ iosinput.addEventListener('keypress', function(e){
 			iosoutput.innerHTML += "<br>JSFS Restore is checking problem for C: drive...";
 			if (disk === undefined){
 				iosoutput.innerHTML += "<br>JSFS Restore has finded problem. fixing...";
-				disk = JSON.parse('{"files": {"info.txt":"The HTML-DOS is Restored by JSFS Recovery."}}')
+				fetch('https://adev531.github.io/HTMLDOS/disk.json')
+				.then((response) => response.json())
+    				.then((json) => disk = json)
+				//fetchs default disk
 				if (disk != undefined) {
 					iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
 					saveDisk();
