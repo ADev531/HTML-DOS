@@ -1,7 +1,5 @@
 {
   "files" : {
-    "helloworld.txt": "Hello, world!",
-    "nothelloworld.exe": "not hello world!",
-	"thisisvirus.txt": "virus virus this is virus"
+    "guide.txt": "Welcome to HTML-DOS!<br><br>Here is Some commands : <br>readfile [File] - Read file<br>dir - List Files<br>writeline - Write line to file.<br>Soon, More Guide is added!",
   }
 }
