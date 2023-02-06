@@ -9,10 +9,10 @@ var disk = readDisk();
 iosinput.addEventListener('keypress', function(e){
 	var args = iosinput.value.split(' ');
 	var command = args[0].toLowerCase();
-	var disk = readDisk();
 	
 	if (e.keyCode === 13 || e.which === 13) {
 		e.preventDefault();
+		disk = readDisk();
 		if (command === "echo") {
 			iosoutput.innerHTML += '<br>';
 			args.forEach(function(arg){
