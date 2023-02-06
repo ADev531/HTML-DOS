@@ -17,7 +17,7 @@ function readDisk() {
 			disk = JSON.parse(localStorage.getItem("disk"));
 		}
 	} catch {
-		iooutput.innerHTML += "<br>JSFS Error : Disk may Damaged. Please run command 'restore' to restore HTML-DOS."
+		iosoutput.innerHTML += "<br>JSFS Error : Disk may Damaged. Please run command 'restore' to restore HTML-DOS."
 	}
 }
 
