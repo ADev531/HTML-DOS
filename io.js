@@ -82,8 +82,10 @@ iosinput.addEventListener('keypress', function(e){
 			InitVGA();
 		}
 		else if (command === "restore") {
-			localStorage.removeItem("disk");
-			disk = null;
+			fetch('https://adev531.github.io/HTMLDOS/disk.json')
+			.then((response) => response.json())
+    			.then((json) => disk = json)
+			saveDisk();
 			iosoutput.innerHTML += "<br>Disk Restore Complete : C: drive. Restart (Refresh) to apply.";
 		}
 		else {
