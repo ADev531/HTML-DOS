@@ -92,6 +92,7 @@ iosinput.addEventListener('keypress', function(e){
 					saveDisk();
 				} else {
 					iosoutput.innerHTML += "<br>JSFS Restore has failed disk recovery."
+					saveDisk();
 				}
 			} else {
 				iosoutput.innerHTML += "<br>JSFS Restore is can't find any problem for C: drive.";
