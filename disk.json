@@ -1,5 +1,6 @@
 {
   "files" : {
-    "hello.txt": "Hello, world!",
+    "hello.txt": "Hello world!",
+    "nothelloworld.txt": "not hello world!"
   }
 }
