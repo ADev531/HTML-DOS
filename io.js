@@ -81,6 +81,11 @@ iosinput.addEventListener('keypress', function(e){
 		else if (command === "initvga") {
 			InitVGA();
 		}
+		else if (command === "restore") {
+			localStorage.removeItem("disk");
+			disk = null;
+			iosoutput.innerHTML += "<br>Disk Restore Complete : C: drive. Restart (Refresh) to apply.";
+		}
 		else {
 			iosoutput.innerHTML += "<br>No command named " + command + ".\n";
 		}
