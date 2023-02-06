@@ -82,11 +82,15 @@ iosinput.addEventListener('keypress', function(e){
 			InitVGA();
 		}
 		else if (command === "restore") {
-			fetch('https://adev531.github.io/HTMLDOS/disk.json')
-			.then((response) => response.json())
-    			.then((json) => disk = json)
-			saveDisk();
-			iosoutput.innerHTML += "<br>Disk Restore Complete : C: drive. Restart (Refresh) to apply.";
+			iosoutput.innerHTML += "<br>JSFS Restore is checking problem for C: drive...";
+			if (disk === null) {
+				iosoutput.innerHTML += "<br>JSFS Restore has finded problem. fixing...";
+				disk = JSON.parse('{"files": {"info.txt":"The HTML-DOS Restored by JSFS Recovery."}}')
+				saveDisk();
+				iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
+			} else {
+				iosoutput.innerHTML += "<br>JSFS Restore is can't find any problem for C: drive.";
+			}
 		}
 		else {
 			iosoutput.innerHTML += "<br>No command named " + command + ".\n";
