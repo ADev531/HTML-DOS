@@ -12,7 +12,7 @@ iosinput.addEventListener('keypress', function(e){
 	
 	if (e.keyCode === 13 || e.which === 13) {
 		e.preventDefault();
-		disk = readDisk();
+		var disk = readDisk();
 		if (command === "echo") {
 			iosoutput.innerHTML += '<br>';
 			args.forEach(function(arg){
