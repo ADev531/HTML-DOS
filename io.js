@@ -89,10 +89,10 @@ iosinput.addEventListener('keypress', function(e){
 				//fetchs default disk
 				if (disk != undefined) {
 					iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
+					saveDisk();
 				} else {
 					iosoutput.innerHTML += "<br>JSFS Restore has failed disk recovery."
 				}
-				saveDisk();
 			} else {
 				iosoutput.innerHTML += "<br>JSFS Restore is can't find any problem for C: drive.";
 			}
