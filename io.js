@@ -81,21 +81,12 @@ iosinput.addEventListener('keypress', function(e){
 		else if (command === "initvga") {
 			InitVGA();
 		}
-		else if (command === "restore") {
-			iosoutput.innerHTML += "<br>JSFS Restore is checking problem for C: drive...";
-			if (disk === undefined){
-				iosoutput.innerHTML += "<br>JSFS Restore has finded problem. fixing...";
-				disk = JSON.parse('{"files": {"hello.txt": "hello world"}}')
-				//fetchs default disk
-				if (disk != undefined) {
-					iosoutput.innerHTML += "<br>JSFS Restore has completed disk recovery for C: drive.";
-					saveDisk();
-				} else {
-					iosoutput.innerHTML += "<br>JSFS Restore has failed disk recovery."
-				}
-			} else {
-				iosoutput.innerHTML += "<br>JSFS Restore is can't find any problem for C: drive.";
-			}
+		else if (command === "format") {
+			fetch('https://adev531.github.io/HTMLDOS/disk.json')
+			.then((response) => response.json())
+    			.then((json) => disk = json)
+			//fetchs default disk.
+			saveDisk();
 		}
 		else {
 			iosoutput.innerHTML += "<br>No command named " + command + ".\n";
