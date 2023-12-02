@@ -82,7 +82,7 @@ iosinput.addEventListener('keypress', function(e){
 			InitVGA();
 		}
 		else if (command === "format") {
-			disk = {files:{
+			disk = {files:{}}
 		else {
 			iosoutput.innerHTML += "<br>No command named " + command + ".\n";
 		}
