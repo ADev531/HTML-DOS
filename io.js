@@ -60,7 +60,7 @@ iosinput.addEventListener('keypress', function(e){
 			} catch {
 				iosoutput.innerHTML += "<br>Failed to write HTML-DOS Disk.";
 			}
-		} else if (command === "writeline") {
+		} else if (command === "writefile") {
 			try {
 				iosoutput.innerHTML += "<br><br>";
 				var allfiles = getAllFiles();
