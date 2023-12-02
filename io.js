@@ -82,12 +82,7 @@ iosinput.addEventListener('keypress', function(e){
 			InitVGA();
 		}
 		else if (command === "format") {
-			fetch('https://adev531.github.io/HTMLDOS/disk.json')
-			.then((response) => response.json())
-    			.then((json) => disk = json)
-			//fetchs default disk.
-			saveDisk();
-		}
+			disk = {files:{
 		else {
 			iosoutput.innerHTML += "<br>No command named " + command + ".\n";
 		}
